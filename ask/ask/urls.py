@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^login/', name='login'),
-    url(r'^signup/', name='signup'),
-    url(r'^question/<123>/', name='question'),
-    url(r'^ask/', name='ask'),
-    url(r'^popular/', name='popular'),
-    url(r'^new/', name='new'),
+    url(r'^login/$', 'qa.views.test'),
+    url(r'^signup/$', 'qa.views.test'),
+    url(r'^question/(\d+)$', 'qa.views.test'),
+    url(r'^ask/.*$', 'qa.views.test'),
+    url(r'^popular/$', 'qa.views.test'),
+    url(r'^new/$', 'qa.views.test'),
 ]

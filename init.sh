@@ -9,4 +9,4 @@ sudo /etc/init.d/gunicorn restart
 
 
 #gunicorn -b 0.0.0.0:8080 --workers=4 hello &
-#gunikorn -b 0.0.0.0:8000 --workers=4 ask.wsgi &
+#gunikorn -b 0.0.0.0:8000 --workers=4 ask.wsgi:app
