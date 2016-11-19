@@ -1,4 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 def test(request, *args, **kwargs):
-    return HttpResponse('OK', status=200)
+    return HttpResponse('OK')
+# Create your views here.
